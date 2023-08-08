@@ -1,0 +1,30 @@
+
+
+<!-- <p class="alert alert-info mb-3" *ngIf="value===5" >The Value is 5</p>
+<p class="alert alert-primary mb-3" *ngIf="value===10" >The Value is 10</p>
+<p class="alert alert-info mb-3" *ngIf="value===20">The Value is 20</p> -->
+<hr class="bg-dark">
+<hr class="bg-dark">
+<div>
+    <button class="btn btn-primary mr-3" (click)="price ='5'">set value to 5</button>
+    <button class="btn btn-primary mr-3" (click)="price ='10'">set value to 10</button>
+    <button class="btn btn-primary mr-3" (click)="price ='20'">set value to 20</button>
+</div>
+<hr class="bg-dark">
+<hr class="bg-dark">
+<div [ngSwitch]="price">
+    <p class="alert alert-primary mb-3"
+    *ngSwitchCase="'5'"
+    >The Value is 5</p>
+    <p class="alert alert-primary mb-3"
+    *ngSwitchCase="'10'"
+    >The Value is 10</p>
+    <p class="alert alert-primary mb-3"
+    *ngSwitchCase="'20'"
+    >The Value is 20</p>
+    <p class=" alert alert-primary mb-3"
+    *ngSwitchDefault>
+    Price Value Is Not Set Yet.
+    </p>
+</div>
+
